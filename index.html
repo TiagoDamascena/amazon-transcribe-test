@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test video subtitles</title>
+
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .player {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <video
+      class="video-js player"
+      data-setup="{}"
+      controls
+      style="width:100%;height:100%"
+    >
+      <source
+        src="https://cdn2.cefis.com.br/vod/68d32785-bd34-47e7-a17c-23fc058bc24a/720.mp4"
+        type="video/mp4"
+      />
+      <track
+        kind="captions"
+        src="https://cefis-video-storage.s3.us-west-2.amazonaws.com/vod/68d32785-bd34-47e7-a17c-23fc058bc24a/test-transcribe-68d32785-bd34-47e7-a17c-23fc058bc24a.vtt"
+        srclang="pt-BR"
+        label="Legenda automática"
+        default
+      />
+    </video>
+
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  </body>
+</html>
